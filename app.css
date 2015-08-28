@@ -1,0 +1,26 @@
+/**
+*	Styles for React Demo
+*
+*	@author Lakha Singh
+*/
+
+html, body, .main{
+	height: 100%;
+}
+
+body{
+	margin: 10px;
+}
+
+.main > ul{
+	list-style: none;
+	padding: 0;
+    margin: 0;
+   	height: 100%;
+}
+.main > ul >li{
+	float: left;
+	height: 50%;
+	width: 49%;
+	border: 1px solid #ccc;
+}

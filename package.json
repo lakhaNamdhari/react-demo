@@ -1,0 +1,20 @@
+{
+  "name": "react-demo",
+  "version": "1.0.0",
+  "description": "This repository explores the capabilities of reactJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lakhaNamdhari/react-demo"
+  },
+  "author": "Lakha Singh <polizic@yahoo.co.in>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lakhaNamdhari/react-demo/issues"
+  },
+  "homepage": "https://github.com/lakhaNamdhari/react-demo",
+  "devDependencies": {}
+}
