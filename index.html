@@ -1,26 +1,59 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>React Demo</title>
+	<title>React's Performance</title>
 	<link rel="stylesheet" type="text/css" href="app.css">
 </head>
 <body>
 	<div class="main">
-		<h1>React Demo</h1>
+		<h1>React's Performance</h1>
 		<ul>
-			<li>
-				<h2>JQuery</h2>
+			<li class="jquery">
+				<h2>jquery</h2>
+
+				<div class="component">
+					<form>
+						<input placeholder="Select Item" class="edit-box" type="text">	
+						<ul class="list">
+							<li><a href="javascript:void(0)">name</a></li>
+							<li><a href="javascript:void(0)">name</a></li>
+							<li><a href="javascript:void(0)">name</a></li>
+							<li><a href="javascript:void(0)">name</a></li>
+							<li><a href="javascript:void(0)">name</a></li>
+							<li><a href="javascript:void(0)">name</a></li>
+							<li><a href="javascript:void(0)">name</a></li>
+							<li><a href="javascript:void(0)">name</a></li>
+							<li><a href="javascript:void(0)">name</a></li>
+							<li><a href="javascript:void(0)">name</a></li>
+							<li><a href="javascript:void(0)">name</a></li>
+							<li><a href="javascript:void(0)">name</a></li>
+							<li><a href="javascript:void(0)">name</a></li>
+							<li><a href="javascript:void(0)">name</a></li>
+						</ul>
+					</form>
+				</div>
 			</li>	
-			<li></li>	
-			<li></li>	
-			<li></li>	
+			<li class="backbone">
+				<h2>backbone</h2>
+
+				<div class="component"></div>
+			</li>	
+			<li class="angular">
+				<h2>angular</h2>
+
+				<div class="component"></div>
+			</li>	
+			<li class="react">
+				<h2>react</h2>
+
+				<div class="component"></div>
+			</li>	
 		</ul>	
 	</div>
 
 	<!-- vendor file -->
 	<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
 	<script type="text/javascript" src="bower_components/underscore/underscore.js"></script>
-	<script type="text/javascript" src="bower_components/handlebars/handlebars.js"></script>
 	<script type="text/javascript" src="bower_components/backbone/backbone.js"></script>
 	<script type="text/javascript" src="bower_components/angular/angular.js"></script>
 	<script type="text/javascript" src="bower_components/react/react.js"></script>
@@ -31,7 +64,18 @@
 	<script type="text/javascript" src="scripts/demo-angular.js"></script>
 	<script type="text/javascript" src="scripts/demo-react.js"></script>
 
-	<!-- template -->
-	<script id="list-tmpl" type="custom-template"></script>
+	<!-- templates -->
+	<script id="edit-list-tmpl" type="tmpl">
+		<form>
+			<input class="edit-box" type="text">
+		</form>	
+	</script>
+	<script id="list-tmpl" type="tmpl">
+		<ul class="list">
+			<% for ( var i = 0; i < data.length; i++ ){ %>
+				<li data-index="<%= i %>"><%= name %></li>
+			<% } %>
+		</ul>	
+	</script>
 </body>
 </html>

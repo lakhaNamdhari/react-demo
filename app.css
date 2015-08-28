@@ -9,23 +9,85 @@ html{
 	color: #555;
 }
 
-html, body, .main{
-	height: 100%;
-}
-
 body{
 	margin: 10px;
 }
 
-.main > ul{
+ul{
 	list-style: none;
+}
+
+a{
+    text-decoration: none;
+    display: block;
+    color: #555;
+}
+
+h1{
+	text-transform: uppercase;
+    margin: 50px 0;
+    text-shadow: 1px 1px #ddd;
+}
+
+.main {
+	width: 960px;
+	margin: 0 auto;
+}
+
+.main > ul{
 	padding: 0;
     margin: 0;
-   	height: 100%;
 }
+
+/* isolated containers */
 .main > ul >li{
-	float: left;
-	height: 50%;
-	width: 49%;
-	border: 1px solid #EEE;
+    float: left;
+    height: 380px;
+    width: 43%;
+    border: 1px solid #EEE;
+    padding: 10px 25px;
+}
+
+/* isolated container headings */
+.main > ul >li > h2{
+	text-transform: capitalize;
+    background-color: #eee;
+    margin-top: 0;
+    text-align: center;
+    padding: 10px 0;
+    color: #888;
+    margin-bottom: 30px;
+}
+
+.component{
+	width: 265px;
+    margin: 0 auto;
+}
+
+/* List component */
+.list{
+    height: 224px;
+    overflow: scroll;
+    border: 1px solid #eee;
+    padding: 0;
+}
+
+.list > li a{
+    padding: 5px 10px;
+}
+
+.list > li a:hover, .list > li a:active{
+	background: #43AC6A;
+	color: #fff;
+}
+
+/* Edit component */
+.edit-box{
+    width: 100%;
+    height: 30px;
+    padding: 0 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    color: #555;
 }
