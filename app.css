@@ -4,6 +4,11 @@
 *	@author Lakha Singh
 */
 
+html{
+	font-family: helvetica, arial;
+	color: #555;
+}
+
 html, body, .main{
 	height: 100%;
 }
@@ -22,5 +27,5 @@ body{
 	float: left;
 	height: 50%;
 	width: 49%;
-	border: 1px solid #ccc;
+	border: 1px solid #EEE;
 }
