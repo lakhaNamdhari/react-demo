@@ -72,11 +72,19 @@ h1{
     padding: 0;
 }
 
+.list > li{
+    border-top: 1px solid #eee;
+}
+
+.list > li:first-child{
+    border-top: none;
+}
+
 .list > li a{
     padding: 5px 10px;
 }
 
-.list > li a:hover, .list > li a:active{
+.list > li a:hover, .list > li a.active{
 	background: #43AC6A;
 	color: #fff;
 }

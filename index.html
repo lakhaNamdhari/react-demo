@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>React's Performance</title>
+	<title>The Performant</title>
 	<link rel="stylesheet" type="text/css" href="app.css">
 </head>
 <body>
 	<div class="main">
-		<h1>React's Performance</h1>
+		<h1>The Performant</h1>
 		<ul>
 			<li class="jquery">
 				<h2>jquery</h2>
@@ -14,22 +14,7 @@
 				<div class="component">
 					<form>
 						<input placeholder="Select Item" class="edit-box" type="text">	
-						<ul class="list">
-							<li><a href="javascript:void(0)">name</a></li>
-							<li><a href="javascript:void(0)">name</a></li>
-							<li><a href="javascript:void(0)">name</a></li>
-							<li><a href="javascript:void(0)">name</a></li>
-							<li><a href="javascript:void(0)">name</a></li>
-							<li><a href="javascript:void(0)">name</a></li>
-							<li><a href="javascript:void(0)">name</a></li>
-							<li><a href="javascript:void(0)">name</a></li>
-							<li><a href="javascript:void(0)">name</a></li>
-							<li><a href="javascript:void(0)">name</a></li>
-							<li><a href="javascript:void(0)">name</a></li>
-							<li><a href="javascript:void(0)">name</a></li>
-							<li><a href="javascript:void(0)">name</a></li>
-							<li><a href="javascript:void(0)">name</a></li>
-						</ul>
+						<ul class="list"></ul>
 					</form>
 				</div>
 			</li>	
@@ -51,6 +36,120 @@
 		</ul>	
 	</div>
 
+	<script id="tmpl-list-item" type="tmpl">
+		<% for ( var i = 0; i < data.length; i++ ){ %>
+			<li><a data-index="<%= i %>" href="javascript:void(0)"><%= data[i] %></a></li>
+		<% } %>
+	</script>
+	<!-- comp Data -->
+	<script type="application/json" id="data">
+		[
+			"name",
+			"class",
+			"yes",
+			"no",
+			"maybe",
+			"yo",
+			"name",
+			"name",
+			"name",
+			"name",
+			"name",
+			"name",
+			"name",
+			"name",
+			"name",
+			"name",
+			"name",
+			"name",
+			"name",
+			"name",
+			"name",			"name",
+			"name",
+			"name",
+			"name",
+			"name",
+			"name",
+			"name",
+			"name",
+			"name",
+			"name",			"name",
+			"name",
+			"name",
+			"name",
+			"name",
+			"name",
+			"name",
+			"name",
+			"name",
+			"name",			"name",
+			"name",
+			"name",
+			"name",
+			"name",
+			"name",
+			"name",
+			"name",
+			"name",
+			"name",			"name",
+			"name",
+			"name",
+			"name",
+			"name",
+			"name",
+			"name",
+			"name",
+			"name",
+			"name",			"name",
+			"name",
+			"name",
+			"name",
+			"name",
+			"name",
+			"name",
+			"name",
+			"name",
+			"name",			"name",
+			"name",
+			"name",
+			"name",
+			"name",
+			"name",
+			"name",
+			"name",
+			"name",
+			"name",			"name",
+			"name",
+			"name",
+			"name",
+			"name",
+			"name",
+			"name",
+			"name",
+			"name",
+			"name",			"name",
+			"name",
+			"name",
+			"name",
+			"name",
+			"name",
+			"name",
+			"name",
+			"name",
+			"name",			"name",
+			"name",
+			"name",
+			"name",
+			"name",
+			"name",
+			"name",
+			"name",
+			"name",
+			"name",
+			"name"
+		]
+	</script>
+
 	<!-- vendor file -->
 	<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
 	<script type="text/javascript" src="bower_components/underscore/underscore.js"></script>
@@ -63,19 +162,5 @@
 	<script type="text/javascript" src="scripts/demo-backbone.js"></script>
 	<script type="text/javascript" src="scripts/demo-angular.js"></script>
 	<script type="text/javascript" src="scripts/demo-react.js"></script>
-
-	<!-- templates -->
-	<script id="edit-list-tmpl" type="tmpl">
-		<form>
-			<input class="edit-box" type="text">
-		</form>	
-	</script>
-	<script id="list-tmpl" type="tmpl">
-		<ul class="list">
-			<% for ( var i = 0; i < data.length; i++ ){ %>
-				<li data-index="<%= i %>"><%= name %></li>
-			<% } %>
-		</ul>	
-	</script>
 </body>
 </html>
