@@ -16,5 +16,8 @@
     "url": "https://github.com/lakhaNamdhari/react-demo/issues"
   },
   "homepage": "https://github.com/lakhaNamdhari/react-demo",
-  "devDependencies": {}
+  "devDependencies": {
+    "connect": "^3.4.0",
+    "serve-static": "^1.10.0"
+  }
 }
