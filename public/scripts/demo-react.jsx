@@ -14,9 +14,8 @@
 
 	// holder for list-items
 	var comp = $('.react .component');
-
 	var List = R.createClass({
-		render: function(){
+		render: function(){ 
 			var listItems = this.props.data.map(function (item){
 				return (
 					<li>
@@ -27,7 +26,7 @@
 
 			return (
 				<form>
-					<input placeholder="Select Item" class="edit-box" type="text">	
+					<input placeholder="Select Item" class="edit-box" type="text" />	
 					<ul class="list">
 						{listItems}
 					</ul>
@@ -37,7 +36,7 @@
 	});
 
 	R.render(
-		<List data="{data}" />,
+		<List data={data} />,
 		comp[0]
 	);
 
