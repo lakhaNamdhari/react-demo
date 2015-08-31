@@ -27,6 +27,7 @@ h1{
 	text-transform: uppercase;
     margin: 50px 0;
     text-shadow: 1px 1px #ddd;
+    color: #888;
 }
 
 .main {
@@ -55,7 +56,6 @@ h1{
     margin-top: 0;
     text-align: center;
     padding: 10px 0;
-    color: #888;
     margin-bottom: 30px;
 }
 
@@ -98,4 +98,17 @@ h1{
     margin-bottom: 20px;
     box-sizing: border-box;
     color: #555;
+}
+
+/* Temp hide angular & backbone */
+.angular, .backbone{
+    display: none;
+}
+
+.jquery h2{
+    color: #000;
+}
+
+.react h2{
+    color: #CC7A6F;
 }

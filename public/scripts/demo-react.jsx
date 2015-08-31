@@ -70,7 +70,7 @@
 
 			return (
 				<form>
-					<input placeholder="Select Item" className="edit-box" type="text" ref="editField" onKeyUp={this.hKeyUp} />	
+					<input placeholder="Select fruit to Edit" className="edit-box" type="text" ref="editField" onKeyUp={this.hKeyUp} />	
 					<ul className="list" onClick={this.hClick}>
 						{listItems}
 					</ul>

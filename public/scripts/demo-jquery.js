@@ -56,6 +56,4 @@
 		listHolder.find('[data-index=' + i + ']' ).addClass('active');
 	});
 
-	// auto select first list-item to edit
-	listHolder.find('a').first().click();
 }( jQuery, _ )
