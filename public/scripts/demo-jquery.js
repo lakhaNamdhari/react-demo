@@ -27,7 +27,7 @@
 	// Add list items to DOM
 	listHolder.append( tmplListItem({data: data}) );
 
-	// Bind handler to read list-item to textField
+	// Bind handler to read clicked list-item to textField
 	listHolder.on('click', 'a', function( e ){
 		var link = $( e.target );
 
