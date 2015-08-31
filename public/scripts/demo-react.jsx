@@ -62,18 +62,14 @@
 		render: function(){ 
 			var listItems = this.state.data.map(function ( item, i ){
 				return (
-					<li>
-						<a data-index={i} href="javascript:void(0)">{item}</a>
-					</li>
+					<li><a data-index={i} href="javascript:void(0)">{item}</a></li>
 				);
 			});
 
 			return (
 				<form>
 					<input placeholder="Select fruit to Edit" className="edit-box" type="text" ref="editField" onKeyUp={this.hKeyUp} />	
-					<ul className="list" onClick={this.hClick}>
-						{listItems}
-					</ul>
+					<ul className="list" onClick={this.hClick}>{listItems}</ul>
 				</form>
 			);
 		}

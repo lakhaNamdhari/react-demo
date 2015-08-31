@@ -101,7 +101,7 @@ h1{
 }
 
 /* Temp hide angular & backbone */
-.angular, .backbone{
+.backbone{
     display: none;
 }
 
@@ -110,5 +110,5 @@ h1{
 }
 
 .react h2{
-    color: #CC7A6F;
+    color: #EE0E0E;
 }
