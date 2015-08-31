@@ -101,9 +101,6 @@ h1{
 }
 
 /* Temp hide angular & backbone */
-.backbone{
-    display: none;
-}
 
 .jquery h2{
     color: #000;

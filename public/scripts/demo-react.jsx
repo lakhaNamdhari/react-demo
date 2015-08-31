@@ -4,13 +4,13 @@
 *	@author Lakha Singh
 */
 
-+function( R ){
-	if ( !R){
++function( R, $ ){
+	if ( !R || !$ ){
 		return false;
 	}
 
 	// Data to be used to render list-items
-	var data = JSON.parse( $('#data').html() );
+	var data = JSON.parse( document.getElementById('data').innerHTML );
 
 	// Holder for list-items
 	var comp = $('.react .component');
@@ -81,4 +81,4 @@
 		comp[0]
 	);
 
-}( React )
+}( React, jQuery )

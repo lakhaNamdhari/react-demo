@@ -52,10 +52,24 @@
 		</ul>	
 	</div>
 
+	<!-- Templates -->
+	<script id="tmpl-bb-list-item" type="tmpl">
+		<% for ( var i = 0; i < data.length; i++ ){ %>
+			<li><a data-index="<%= i %>" href="javascript:void(0)"><%= data[i].item %></a></li>
+		<% } %>
+	</script>	
+
 	<script id="tmpl-list-item" type="tmpl">
 		<% for ( var i = 0; i < data.length; i++ ){ %>
 			<li><a data-index="<%= i %>" href="javascript:void(0)"><%= data[i] %></a></li>
 		<% } %>
+	</script>
+
+	<script id="tmpl-list-edit" type="tmpl">
+		<form>
+			<input placeholder="Select fruit to Edit" class="edit-box" type="text">	
+			<ul class="list"></ul>
+		</form>
 	</script>
 
 	<!-- Data -->
@@ -81,6 +95,32 @@
 			"Papaya",
 			"Grapefruit",
 			"Jackfruit"
+		]
+	</script>
+
+	<!-- BB Data -->
+	<script type="application/json" id="bb-data">
+		[
+			{"item": "Apple"},
+			{"item": "Orange"},
+			{"item": "Mango"},
+			{"item": "Pineapple"},
+			{"item": "Guava"},
+			{"item": "Melon"},
+			{"item": "Pomelo"},
+			{"item": "Appricot"},
+			{"item": "Banana"},
+			{"item": "Blackberry"},
+			{"item": "Blueberry"},
+			{"item": "Cherry"},
+			{"item": "Coconut"},
+			{"item": "Date"},
+			{"item": "Fig"},
+			{"item": "Star Fruit"},
+			{"item": "Strawberry"},
+			{"item": "Papaya"},
+			{"item": "Grapefruit"},
+			{"item": "Jackfruit"}
 		]
 	</script>
 
