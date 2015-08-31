@@ -24,10 +24,10 @@ a{
 }
 
 h1{
-	text-transform: uppercase;
+    text-transform: uppercase;
     margin: 50px 0;
-    text-shadow: 1px 1px #ddd;
-    color: #888;
+    text-shadow: 1px 1px #999;
+    color: #ccc;
 }
 
 .main {
@@ -103,9 +103,17 @@ h1{
 /* Temp hide angular & backbone */
 
 .jquery h2{
-    color: #000;
+    color: #5E412F;
+}
+
+.backbone h2{
+    color: #29ABA4;
 }
 
 .react h2{
     color: #EE0E0E;
+}
+
+.angular h2{
+    color: #28ABE3;
 }
