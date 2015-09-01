@@ -14,4 +14,4 @@ var server = connect();
 
 server.use( connectStatic('public', {index: 'index.html'}) );
 
-http.createServer( server ).listen( 5999 );
+http.createServer( server ).listen( process.env.PORT || 5000 );
