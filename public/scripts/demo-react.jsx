@@ -15,40 +15,62 @@
 	// Holder for list-items
 	var comp = $('.react .component');
 
-	// React component
+	// List component
 	var List = R.createClass({
+		// Defines component 
+		render: function(){ 
+			var listItems = this.props.data.map(function ( item, i ){
+				return (
+					<li><a data-index={i} href="javascript:void(0)">{item}</a></li>
+				);
+			});
+
+			return (
+				<ul className="list">
+					{listItems}
+				</ul>
+			);
+		}
+	});
+
+	// Edit-List component
+	var EditList = R.createClass({
 		// Called once in component's life-cycle
 		getInitialState: function(){
 			return {
-				data: this.props.data,
-				active: null
+				active: null,
+				data: this.props.data
 			};
 		},
 
 		// Bind handler to read clicked list-item to textField
 		hClick: function( e ){
-			var link = $( e.target );
+			var link, txtField;
 
-			var txtField = $( React.findDOMNode( this.refs.editField ) );
+			if ( e.target.tagName === 'A' ){
+				link = $( e.target );
 
-			if ( this.state.active ){
-				this.state.active.removeClass('active');
+				txtField = $( React.findDOMNode( this.refs.editField ) );
+
+				if ( this.state.active ){
+					this.state.active.removeClass('active');
+				}
+				link.addClass('active');
+				this.state.active = link;
+
+				txtField.val( link.text() );
+				txtField.data('index', parseInt( link.attr('data-index') ) );
 			}
-			link.addClass('active');
-			this.state.active = link;
-
-			txtField.val( link.text() );
-			txtField.data('index', parseInt( link.attr('data-index') ) );
 		},
 
 		// Bind handler to render list-items, when edited
-		hKeyUp: function( e ){ console.log('hi');
+		hKeyUp: function( e ){
 			var txtField = $( e.target );
 			var i = txtField.data('index');
 			var value = txtField.val();
 			var newData;
 
-			// Mimick data changes from server
+			// Mimic data changes from server
 			newData = this.props.data.slice(0);
 			newData[i] = value;
 
@@ -60,16 +82,10 @@
 
 		// Defines component 
 		render: function(){ 
-			var listItems = this.state.data.map(function ( item, i ){
-				return (
-					<li><a data-index={i} href="javascript:void(0)">{item}</a></li>
-				);
-			});
-
 			return (
-				<form>
+				<form onClick={this.hClick}>
 					<input placeholder="Select fruit to Edit" className="edit-box" type="text" ref="editField" onKeyUp={this.hKeyUp} />	
-					<ul className="list" onClick={this.hClick}>{listItems}</ul>
+					<List data={this.state.data} />
 				</form>
 			);
 		}
@@ -77,7 +93,7 @@
 
 	// Renders VDOM to real DOM
 	R.render(
-		<List data={data} />,
+		<EditList data={data} />,
 		comp[0]
 	);
 
