@@ -4,7 +4,8 @@
   "description": "This repository explores the capabilities of reactJS",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "bower": "./node_modules/bower/bin/bower install"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,7 @@
   },
   "homepage": "https://github.com/lakhaNamdhari/react-demo",
   "dependencies": {
+    "bower": "^1.5.2",
     "connect": "^3.4.0",
     "serve-static": "^1.10.0"
   }
