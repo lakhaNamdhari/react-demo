@@ -12,6 +12,6 @@ var connectStatic = require('serve-static');
 
 var server = connect();
 
-server.use( connectStatic('public', {index: 'index.html'}) );
+server.use( connectStatic('./', {index: 'index.html'}) );
 
 http.createServer( server ).listen( process.env.PORT || 5000 );
