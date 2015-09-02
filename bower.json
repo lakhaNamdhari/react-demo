@@ -1,0 +1,27 @@
+{
+  "name": "react-demo",
+  "version": "1.0.0",
+  "homepage": "https://github.com/lakhaNamdhari/react-demo",
+  "authors": [
+    "Lakha Singh <polizic@yahoo.co.in>"
+  ],
+  "description": "demonstrating rect capabilities",
+  "main": "server.js",
+  "keywords": [
+    "react-demo"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.5",
+    "backbone": "~1.2.2",
+    "jquery": "~2.1.4",
+    "react": "~0.13.3"
+  }
+}
